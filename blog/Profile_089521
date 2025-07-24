@@ -1,0 +1,19 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+class Profile(models.Model):
+    User=models.DataField
+    bio=models.TextField(max_length=150)
+    avatar=models.FileField
+
+    def __str__(self):
+        return self.User
+
+class Post(models.Model):
+    User = models.DataField(unique=true)
+    # slug  = models.SlugField(unique=True)
+    bio  = models.TextField(max_length=150)
+    avatar=models.FileField
+    
+    def __str__(self):
+        return f'Comment by {self.User}'
