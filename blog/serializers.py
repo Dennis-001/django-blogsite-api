@@ -3,7 +3,7 @@ from rest_framework import routers, serializers, viewsets
 
 # Import the models to serialize
 from .models import Post, Comment, Category
-
+from .models import Post, Profile
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
